@@ -41,8 +41,8 @@ const AppBar = () => {
             <div className="max-w-[1400px] mx-auto px-6 h-16 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="text-lg md:text-xl font-heading font-bold tracking-tight z-50 text-white flex items-center gap-2 shrink-0">
-                    <img src="/logo.png" alt="Logo" className="h-10 w-auto md:h-12 mr-2 hidden" /> {/* Placeholder for logo img if exists, else text */}
-                    <span>GRAPHE <span className="text-accent">TOGO</span></span>
+                    <img src="/images/logo.jpeg" alt="Logo" className="h-10 w-auto md:h-12 mr-2 rounded-full" />
+
                 </Link>
 
                 {/* Desktop Nav */}
@@ -69,14 +69,7 @@ const AppBar = () => {
                 </nav>
 
                 {/* Action Button */}
-                <div className="hidden md:block shrink-0">
-                    <a
-                        href="#contact"
-                        className="px-6 py-2.5 rounded bg-accent text-primary font-heading font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-sm hover:bg-yellow-500 hover:shadow-md"
-                    >
-                        S'inscrire
-                    </a>
-                </div>
+
 
                 {/* Mobile Menu Button */}
                 <button

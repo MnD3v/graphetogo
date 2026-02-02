@@ -7,9 +7,10 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand Section */}
                     <div className="flex flex-col items-start">
-                        <h2 className="font-heading text-2xl font-bold text-white mb-6">
-                            GRAPHE <span className="text-primary">TOGO</span>
-                        </h2>
+                        <div className="flex items-center gap-2 mb-6">
+                            <img src="/images/logo.jpeg" alt="GRAPHE Togo Logo" className="h-12 w-auto rounded-full" />
+                           
+                        </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
                             Groupe chrétien de Recherche Action pour la Promotion Humaine par l'Éducation. Œuvrer pour un développement durable et inclusif.
                         </p>
