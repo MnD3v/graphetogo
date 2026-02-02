@@ -25,31 +25,34 @@ const Gallery = ({ limit }) => {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {visibleItems.map((item) => (
                         <div
                             key={item.id}
-                            className="group relative cursor-pointer overflow-hidden rounded-xl shadow-lg border border-gray-100"
+                            className="group relative cursor-pointer overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500"
                             onClick={() => setSelectedImage(item)}
                         >
                             {/* Image Container */}
-                            <div className="aspect-[4/3] overflow-hidden">
+                            <div className="aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] overflow-hidden">
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                             </div>
 
                             {/* Overlay */}
-                            <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-primary/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                <span className="text-accent text-xs font-bold uppercase tracking-wider mb-1 block">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+
+                            {/* Content */}
+                            <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span className="inline-block px-3 py-1 mb-3 text-xs font-bold tracking-widest text-white uppercase border border-white/30 rounded-full backdrop-blur-sm">
                                     {item.category}
                                 </span>
-                                <h3 className="text-white font-heading font-bold text-xl">
+                                <h3 className="text-2xl font-heading font-bold text-white mb-2 leading-tight">
                                     {item.title}
                                 </h3>
-                                <p className="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
+                                <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">
                                     {item.description}
                                 </p>
                             </div>
@@ -62,7 +65,7 @@ const Gallery = ({ limit }) => {
                     <div className="mt-12 text-center">
                         <Link
                             to="/galerie"
-                            className="inline-block px-10 py-3 bg-transparent border-2 border-primary text-primary font-heading font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-all duration-300 rounded"
+                            className="inline-block px-10 py-3 bg-transparent border border-primary text-primary font-heading font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-all duration-300 rounded-full"
                         >
                             Voir toute la galerie
                         </Link>

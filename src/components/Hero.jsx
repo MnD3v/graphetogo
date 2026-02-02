@@ -31,7 +31,7 @@ const Hero = () => {
           </a>
           <a
             href="#contact" // or a products link if available
-            className="w-full sm:w-auto px-8 py-3 bg-accent text-primary-900 font-heading font-bold uppercase tracking-wider text-sm hover:bg-yellow-500 transition-all duration-300 rounded shadow-md flex items-center gap-2 justify-center"
+            className="w-full sm:w-auto px-8 py-3 bg-primary text-white font-heading font-bold uppercase tracking-wider text-sm hover:bg-primary/80 transition-all duration-300 rounded shadow-md flex items-center gap-2 justify-center"
           >
             Nos Produits <span className="text-lg">→</span>
           </a>

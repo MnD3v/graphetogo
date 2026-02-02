@@ -17,7 +17,7 @@ function Home() {
             <About />
             <Services />
             <Projects />
-            <Gallery limit={6} />
+            <Gallery limit={3} />
             <Shop />
             <LatestArticles />
             <Contact />
