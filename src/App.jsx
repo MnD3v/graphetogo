@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import BlogList from './pages/blog/BlogList';
@@ -10,9 +10,26 @@ import GalleryDetail from './pages/GalleryDetail';
 
 import AppBar from './components/AppBar';
 import ScrollToHash from './components/ScrollToHash';
+import Loader from './components/Loader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial loading time for better user experience
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
+
     <Router>
       <ScrollToHash />
       <AppBar />
