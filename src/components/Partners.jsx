@@ -92,20 +92,12 @@ const Partners = () => {
                                 key={idx}
                                 className="group bg-white border border-gray-100 rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-md transition-all duration-300 h-40"
                             >
-                                <div className="h-20 w-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                                <div className="h-full w-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                                     <img
                                         src={partner.logo}
                                         alt={partner.name}
-                                        className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                                        className="max-h-24 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                                     />
-                                </div>
-                                <div className="mt-auto">
-                                    <span className="font-heading text-[11px] font-bold text-gray-500 group-hover:text-primary transition-colors text-center uppercase tracking-tight leading-tight block mb-1">
-                                        {partner.name}
-                                    </span>
-                                    <span className="text-[9px] font-black text-gray-300 uppercase tracking-widest block">
-                                        {partner.category}
-                                    </span>
                                 </div>
                             </div>
                         ))}

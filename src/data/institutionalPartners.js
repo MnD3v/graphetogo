@@ -1,5 +1,4 @@
 export const institutionalPartners = [
-    { name: "PNIASAN (Gouv. Togolais)", category: "Financier", logo: "/images/partners/pniasan.png" },
     { name: "Ambassade de France", category: "Financier", logo: "/images/partners/france.png" },
     { name: "GIZ (Coopération Allemande)", category: "Financier", logo: "/images/partners/giz.png" },
     { name: "CFSI & Fondation de France", category: "Financier", logo: "/images/partners/cfsi.png" },

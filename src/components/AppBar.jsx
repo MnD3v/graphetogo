@@ -19,8 +19,7 @@ const AppBar = () => {
     const navLinks = [
         { name: 'Accueil', path: '/', isAnchor: false },
         { name: 'Qui sommes-nous', path: '/#about', isAnchor: true },
-        { name: 'Bailleurs', path: '/#bailleurs', isAnchor: true },
-        { name: 'Soutenir nos Projets', path: '/#projects', isAnchor: true },
+        { name: 'Projets', path: '/#projects', isAnchor: true },
         { name: 'Nos Services', path: '/#services', isAnchor: true },
         { name: 'Galerie', path: '/galerie', isAnchor: false },
         { name: 'Blog', path: '/blog', isAnchor: false },
