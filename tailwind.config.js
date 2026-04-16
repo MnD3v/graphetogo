@@ -18,7 +18,6 @@ export default {
                 heading: ['Manrope', 'sans-serif'],
                 body: ['Manrope', 'sans-serif'],
                 anton: ['Anton', 'sans-serif'],
-                playfair: ['Playfair Display', 'serif'],
             },
         },
     },
