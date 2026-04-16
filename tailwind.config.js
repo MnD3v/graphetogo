@@ -7,16 +7,17 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#10694e', // Deep Styled Emerald Green
-                secondary: '#1e293b', // Slate 800 (Darker Text)
-                accent: '#eab308', // Gold/Yellow
+                primary: '#01391C', // Dark Forest Green
+                secondary: '#1e293b', // Slate 800
+                accent: '#5DA603',   // Bright Lime Green
                 background: '#ffffff',
-                text: '#374151', // Gray 700
-                light: '#f3f4f6', // Light Gray for sections
+                text: '#374151',     // Gray 700
+                light: '#f3f4f6',    // Light Gray
             },
             fontFamily: {
-                heading: ['Sora', 'sans-serif'],
-                body: ['Sora', 'sans-serif'],
+                heading: ['Manrope', 'sans-serif'],
+                body: ['Manrope', 'sans-serif'],
+                anton: ['Anton', 'sans-serif'],
                 playfair: ['Playfair Display', 'serif'],
             },
         },

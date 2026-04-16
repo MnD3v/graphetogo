@@ -6,7 +6,6 @@ const AppBar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const location = useLocation();
 
-    // Handle scroll effect
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
@@ -19,10 +18,12 @@ const AppBar = () => {
 
     const navLinks = [
         { name: 'Accueil', path: '/', isAnchor: false },
-        { name: 'À propos', path: '/#about', isAnchor: true },
+        { name: 'Qui sommes-nous', path: '/#about', isAnchor: true },
+        { name: 'Bailleurs', path: '/#bailleurs', isAnchor: true },
+        { name: 'Soutenir nos Projets', path: '/#projects', isAnchor: true },
         { name: 'Nos Services', path: '/#services', isAnchor: true },
+        { name: 'Galerie', path: '/galerie', isAnchor: false },
         { name: 'Blog', path: '/blog', isAnchor: false },
-        { name: 'Contact', path: '/#contact', isAnchor: true },
     ];
 
     const scrollToSection = (sectionId) => {
@@ -36,59 +37,65 @@ const AppBar = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-primary shadow-md py-2' : 'bg-primary py-4'}`}
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#01391C]/95 backdrop-blur-md shadow-lg' : 'bg-[#01391C]/80'}`}
         >
-            <div className="max-w-[1400px] mx-auto px-6 h-16 flex justify-between items-center">
-                {/* Logo */}
-                <Link to="/" className="text-lg md:text-xl font-heading font-bold tracking-tight z-50 text-white flex items-center gap-2 shrink-0">
-                    <img src="/images/logo.jpeg" alt="Logo" className="h-10 w-auto md:h-12 mr-2 rounded-full" />
+            <div className="max-w-full mx-auto flex justify-between items-center h-20 border-b border-white/10">
+                {/* Logo Section */}
+                <div className="px-8 border-r border-white/10 h-full flex items-center shrink-0">
+                    <Link to="/" className="flex items-center">
+                        <img src="/images/logo.jpeg" alt="Logo" className="h-14 w-auto object-contain rounded-xl" />
+                    </Link>
+                </div>
 
-                </Link>
-
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+                {/* Desktop Nav Section */}
+                <nav className="hidden lg:flex items-center h-full flex-grow">
                     {navLinks.map((link) => (
-                        <React.Fragment key={link.name}>
+                        <div key={link.name} className="h-full border-r border-white/10 flex items-center px-6 xl:px-8">
                             {link.isAnchor && isHome ? (
                                 <button
                                     onClick={() => scrollToSection(link.path.substring(1))}
-                                    className="text-xs lg:text-sm font-body font-medium text-gray-300 hover:text-white transition-colors"
+                                    className="text-[13px] font-body font-medium text-white/70 hover:text-white transition-colors uppercase tracking-widest whitespace-nowrap"
                                 >
                                     {link.name}
                                 </button>
                             ) : (
                                 <Link
                                     to={link.path}
-                                    className="text-xs lg:text-sm font-body font-medium text-gray-300 hover:text-white transition-colors"
+                                    className="text-[13px] font-body font-medium text-white/70 hover:text-white transition-colors uppercase tracking-widest whitespace-nowrap"
                                 >
                                     {link.name}
                                 </Link>
                             )}
-                        </React.Fragment>
+                        </div>
                     ))}
+                    <div className="flex-grow h-full border-r border-white/10"></div>
                 </nav>
 
-                {/* Action Button */}
-
+                {/* Contact Us Button */}
+                <div className="hidden lg:flex items-center px-8 h-full bg-[#5DA603] hover:bg-[#4d9002] transition-colors cursor-pointer" onClick={() => scrollToSection('contact')}>
+                    <span className="text-[14px] font-body text-white font-bold uppercase tracking-widest whitespace-nowrap">
+                        Contactez-nous
+                    </span>
+                </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden z-50 p-2 text-white"
+                    className="lg:hidden z-50 p-6 text-white"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
-                    <div className={`w-6 h-0.5 mb-1.5 transition-all bg-white ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
-                    <div className={`w-6 h-0.5 mb-1.5 transition-all bg-white ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-                    <div className={`w-6 h-0.5 transition-all bg-white ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
+                    <div className={`w-8 h-0.5 mb-2 transition-all bg-white ${isMobileMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></div>
+                    <div className={`w-8 h-0.5 mb-2 transition-all bg-white ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+                    <div className={`w-8 h-0.5 transition-all bg-white ${isMobileMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></div>
                 </button>
 
                 {/* Mobile Nav Overlay */}
-                <div className={`fixed inset-0 bg-primary z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`fixed inset-0 bg-[#01391C] z-40 flex flex-col items-center justify-center gap-10 transition-transform duration-500 lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     {navLinks.map((link) => (
                         <React.Fragment key={link.name}>
                             {link.isAnchor && isHome ? (
                                 <button
                                     onClick={() => scrollToSection(link.path.substring(1))}
-                                    className="text-2xl font-heading font-bold text-white hover:text-accent"
+                                    className="text-4xl font-anton text-white hover:text-[#5DA603] uppercase tracking-tighter"
                                 >
                                     {link.name}
                                 </button>
@@ -96,13 +103,19 @@ const AppBar = () => {
                                 <Link
                                     to={link.path}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="text-2xl font-heading font-bold text-white hover:text-accent"
+                                    className="text-4xl font-anton text-white hover:text-[#5DA603] uppercase tracking-tighter"
                                 >
                                     {link.name}
                                 </Link>
                             )}
                         </React.Fragment>
                     ))}
+                    <button
+                        onClick={() => { scrollToSection('contact'); setIsMobileMenuOpen(false); }}
+                        className="mt-4 px-10 py-5 bg-[#5DA603] text-white font-body font-bold text-2xl uppercase tracking-widest rounded shadow-xl"
+                    >
+                        Contactez-nous
+                    </button>
                 </div>
             </div>
         </header>

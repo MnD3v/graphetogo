@@ -1,45 +1,46 @@
 import React from 'react';
 
+
 const products = [
     {
         id: 1,
         name: "Piment en poudre",
-        price: "2,30 €",
+        price: "1 500 FCFA",
         image: "/images/produits/produit-1.jpg",
         category: "Épices"
     },
     {
         id: 2,
         name: "Thé de Curcuma",
-        price: "3,81 €",
+        price: "2 500 FCFA",
         image: "/images/produits/produit-2.jpg",
         category: "Bien-être"
     },
     {
         id: 3,
         name: "Thé de Gingembre",
-        price: "3,90 €",
+        price: "2 550 FCFA",
         image: "/images/produits/produit-3.jpg",
         category: "Bien-être"
     },
     {
         id: 4,
         name: "Farine Enrichie",
-        price: "2,50 €",
+        price: "1 650 FCFA",
         image: "/images/produits/produit-4.jpg",
         category: "Céréales"
     },
     {
         id: 5,
         name: "Miel Pur",
-        price: "5,00 €",
+        price: "3 300 FCFA",
         image: "/images/produits/produit-5.png",
         category: "Naturel"
     },
     {
         id: 6,
         name: "Riz Local",
-        price: "10,00 €",
+        price: "6 500 FCFA",
         image: "/images/produits/produit-6.jpg",
         category: "Céréales"
     }
@@ -91,7 +92,7 @@ const Shop = () => {
                                     href={`https://wa.me/22890094383?text=Bonjour, je souhaite commander : ${product.name}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full py-3 text-center bg-primary text-white font-heading font-bold uppercase text-sm tracking-wider rounded hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
+                                    className="w-full py-3 text-center bg-primary text-white font-heading font-bold uppercase text-sm tracking-wider rounded hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />

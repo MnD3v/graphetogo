@@ -69,7 +69,7 @@ const ServiceDetail = () => {
                             <p className="text-gray-500 mb-8">
                                 Vous souhaitez soutenir ce projet ou en savoir plus sur nos actions de terrain ?
                             </p>
-                            <Link to="/#contact" className="px-8 py-4 bg-primary text-white font-heading font-bold uppercase tracking-wider hover:bg-green-900 transition-all duration-300 rounded-lg shadow-lg">
+                            <Link to="/#contact" className="px-8 py-4 bg-primary text-white font-heading font-bold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 rounded-lg shadow-lg">
                                 Nous Contacter
                             </Link>
                         </div>

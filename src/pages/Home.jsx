@@ -7,6 +7,7 @@ import Shop from '../components/Shop';
 import About from '../components/About';
 import LatestArticles from '../components/LatestArticles';
 import Contact from '../components/Contact';
+import Partners from '../components/Partners';
 import Footer from '../components/Footer';
 import '../App.css';
 
@@ -17,6 +18,7 @@ function Home() {
             <About />
             <Services />
             <Projects />
+            <Partners />
             <Gallery limit={3} />
             <Shop />
             <LatestArticles />

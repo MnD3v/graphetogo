@@ -1,0 +1,47 @@
+export const partnersData = [
+    {
+        id: 1,
+        title: "Du champ à l’Assiette",
+        budget: "200 000 €",
+        donors: ["ONG Élevages Sans Frontières (ESF)", "Confédération française de Solidarité International (CFSI)"],
+        period: "2019 - 2022",
+        beneficiaries: "350 bénéficiaires",
+        description: "Organisation des bénéficiaires autour de l'entreprise coopérative AGAKPE pour renforcer la filière locale.",
+    },
+    {
+        id: 2,
+        title: "Système de Riziculture Intensif (SRI)",
+        budget: "30 millions FCFA",
+        donors: ["Banque Mondiale (via PPAAO)"],
+        period: "2014 & 2018",
+        beneficiaries: "20 000+ bénéficiaires",
+        description: "Déploiement du SRI sur l'ensemble du territoire national pour augmenter la productivité rizicole.",
+    },
+    {
+        id: 3,
+        title: "Circuit court du Riz Zio",
+        budget: "50 000 €",
+        donors: ["CFSI"],
+        period: "2016 - 2019",
+        beneficiaries: "1 125 riziculteurs",
+        description: "Création d'un circuit court de commercialisation pour le riz de qualité supérieure de la préfecture de Zio.",
+    },
+    {
+        id: 4,
+        title: "Amélioration de la résilience",
+        budget: "18 millions FCFA",
+        donors: ["Ambassade de France au Togo", "USOCA / GLOTE"],
+        period: "2017 - 2018",
+        beneficiaries: "1 000 producteurs",
+        description: "Accompagnement des exploitations familiales du Haho sous les systèmes SRI et Zaï.",
+    },
+    {
+        id: 5,
+        title: "Restauration des écosystèmes",
+        budget: "50 millions FCFA",
+        donors: ["FIDA (via PADAT)", "Consortium GRAPHE/AVOCH/AEH"],
+        period: "2015 - 2016",
+        beneficiaries: "5 000 producteurs",
+        description: "Adaptation au changement climatique et promotion de l'apiculture dans la région des Plateaux.",
+    }
+];

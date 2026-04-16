@@ -2,88 +2,80 @@ import React from 'react';
 
 const About = () => {
     return (
-        <section id="about" className="py-24 px-[5%] lg:px-[10%] bg-white relative overflow-hidden">
-            {/* Background Texture */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gray-50 -z-0"></div>
+        <section id="about" className="bg-white py-20 px-4 md:px-8">
+            <div className="mx-auto max-w-[1300px] relative overflow-hidden rounded-[40px] bg-[#01391C] flex flex-col lg:flex-row min-h-[600px] shadow-2xl">
 
-            <div className="container mx-auto relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-
-                    {/* Content Section */}
-                    <div className="flex-1 w-full lg:w-1/2 order-2 lg:order-1">
-                        <span className="font-heading text-primary font-bold tracking-[2px] uppercase text-sm mb-4 block">
-                            Qui sommes-nous ?
+                {/* Left Content Area */}
+                <div className="flex-1 p-10 md:p-16 lg:p-20 flex flex-col justify-center relative z-10">
+                    {/* Subtitle Pill */}
+                    <div className="inline-block w-fit mb-8">
+                        <span className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full text-white/90 text-sm font-medium border border-white/20">
+                            Propulser le succès local
                         </span>
-                        <h2 className="font-heading text-4xl lg:text-5xl text-text font-bold mb-8 leading-tight">
-                            Promouvoir l'humain par <span className="text-primary">l'éducation et l'action</span>
-                        </h2>
+                    </div>
 
-                        <div className="space-y-6 font-body text-gray-600 text-lg leading-relaxed">
-                            <p>
-                                <strong>GRAPHE</strong> (Groupe chrétien de Recherche Action pour la Promotion Humaine par l'Éducation) est une Organisation Non Gouvernementale engagée pour le développement rural.
-                            </p>
-                            <ul className="list-disc list-outside ml-4 space-y-2">
-                                <li><strong>Riziculture Résiliente :</strong> Nous accompagnons les producteurs dans la production du riz résilient au climat.</li>
-                                <li><strong>Agroécologie Innovante :</strong> Nous faisons la promotion des technologies innovantes telles que le SRI (Système de Riziculture Intensif), la production du compost, du Bokashi et de l'engrais liquide Bio.</li>
-                                <li><strong>Accompagnement Personnalisé :</strong> Nous guidons les producteurs dans la production et la commercialisation avec des conseils sur mesure pour garantir leur succès.</li>
-                            </ul>
-                        </div>
+                    {/* Main Heading */}
+                    <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-[1.1] mb-8 max-w-[600px]">
+                        Bâtir un avenir plus durable avec l'agroécologie
+                    </h2>
 
-                        <div className="mt-10 grid grid-cols-2 gap-y-8 gap-x-4 pt-8 border-t border-gray-100">
-                            <div className="text-center">
-                                <h3 className="font-heading font-bold text-3xl md:text-4xl text-primary">1996</h3>
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Fondation</p>
+                    {/* Description text */}
+                    <p className="font-body text-white/70 text-lg leading-relaxed mb-12 max-w-[550px]">
+                        Nous nous engageons aux côtés des communautés rurales pour cultiver des solutions innovantes,
+                        renforcer l'autonomie technique et construire une résilience durable face aux défis de demain.
+                    </p>
+
+                    {/* Buttons */}
+                    <div className="flex flex-wrap gap-4">
+                        <a
+                            href="#contact"
+                            className="px-8 py-4 bg-white text-[#01391C] font-bold rounded-full hover:bg-gray-100 transition-all duration-300"
+                        >
+                            Commencer
+                        </a>
+                        <a
+                            href="#services"
+                            className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
+                        >
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+
+                {/* Right Image Area */}
+                <div className="lg:w-[45%] relative min-h-[400px] lg:min-h-full">
+                    <img
+                        src="/images/about.jpg"
+                        alt="Impact Agriculture"
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+
+                    {/* Floating Stats Card Overlay */}
+                    <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[20%] z-20 hidden lg:block">
+                        <div className="bg-white p-8 rounded-[25px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border border-gray-100 min-w-[300px]">
+                            <div className="flex justify-between items-center mb-6">
+                                <span className="text-gray-400 text-sm font-medium">Bilan 2024</span>
+                                <div className="bg-gray-50 border border-gray-200 px-3 py-1 rounded-lg text-gray-600 text-xs flex items-center gap-2 cursor-pointer">
+                                    Impact
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
                             </div>
-                            <div className="text-center">
-                                <h3 className="font-heading font-bold text-3xl md:text-4xl text-primary">100%</h3>
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Réussite</p>
+
+                            <div className="mb-4">
+                                <span className="text-gray-500 text-sm block mb-1">Femmes Rurales Accompagnées</span>
+                                <span className="text-4xl font-bold text-gray-900">2 100 +</span>
                             </div>
-                            <div className="text-center">
-                                <h3 className="font-heading font-bold text-3xl md:text-4xl text-primary">Agro</h3>
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Écologie</p>
-                            </div>
-                            <div className="text-center">
-                                <h3 className="font-heading font-bold text-3xl md:text-4xl text-primary">Kara</h3>
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">Campus</p>
+
+                            <div className="inline-flex items-center gap-2 bg-[#5DA603]/10 text-[#5DA603] px-3 py-1-5 rounded-lg text-sm font-bold">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18 9 11.25l4.306 4.307L21.75 4.5M21.75 4.5H16.5M21.75 4.5v5.25" />
+                                </svg>
+                                Progrès communautaire durable
                             </div>
                         </div>
                     </div>
-
-                    {/* Image Placeholder Section - Since we don't have the specific pastor image anymore, this stays abstract or we could put a nature image */}
-                    {/* Images Composition */}
-                    <div className="flex-1 w-full lg:w-1/2 order-1 lg:order-2 relative">
-                        <div className="relative w-full max-w-lg mx-auto h-[400px] lg:h-[500px]">
-                            {/* Decorative Background Blob */}
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-primary/5 to-accent/5 rounded-full blur-3xl -z-10"></div>
-
-                            {/* Main Image (Back) */}
-                            <div className="absolute top-0 right-0 w-[70%] h-[85%] rounded-2xl overflow-hidden shadow-lg border border-gray-100/50">
-                                <img
-                                    src="/images/galerie/galerie-1.jpg"
-                                    alt="Formation au champ"
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
-                            </div>
-
-                            {/* Secondary Image (Front - Overlapping) */}
-                            <div className="absolute bottom-0 left-0 w-[60%] h-[60%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform hover:-translate-y-2 transition-transform duration-500">
-                                <img
-                                    src="/images/galerie/galerie-3.png"
-                                    alt="Rencontre communautaire"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-
-                            {/* Experience Badge */}
-                            <div className="absolute top-12 left-4 md:left-0 bg-white p-5 rounded-2xl shadow-xl max-w-[160px] border border-gray-50 transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                                <p className="font-heading font-bold text-primary text-3xl text-center">30</p>
-                                <p className="font-heading font-bold text-text text-sm text-center">Ans d'expérience</p>
-                                <p className="text-xs text-center text-gray-400 mt-1">Depuis 1996</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>

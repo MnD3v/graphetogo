@@ -49,7 +49,7 @@ export default function BlogList() {
                         <div key={post._id}>
                             <Link
                                 to={`/blog/${post.slug.current}`}
-                                className="group block bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1"
+                                className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-1"
                             >
                                 {/* Image */}
                                 <div className="relative h-64 w-full overflow-hidden bg-gray-100">
@@ -70,7 +70,7 @@ export default function BlogList() {
                                 <div className="p-6 flex flex-col flex-grow">
                                     {/* Category */}
                                     <div className="mb-4">
-                                        <span className="bg-green-50 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                        <span className="bg-primary/5 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                                             {post.categories && post.categories.length > 0 ? post.categories[0].title : "Article"}
                                         </span>
                                     </div>

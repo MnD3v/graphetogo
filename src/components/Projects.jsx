@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
     return (
@@ -17,91 +18,8 @@ const Projects = () => {
                     </p>
                 </div>
 
-                {/* Initiatives Grid */}
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    {/* Initiative I */}
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
-                        <div className="h-48 bg-primary/10 relative overflow-hidden group">
-                            {/* Placeholder for Image */}
-                            <div className="absolute inset-0 flex items-center justify-center text-primary/20">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={0.5} stroke="currentColor" className="w-24 h-24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                </svg>
-                            </div>
-                            <div className="absolute top-4 left-4 bg-accent text-primary text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">
-                                Initiative I
-                            </div>
-                        </div>
-                        <div className="p-8 flex flex-col flex-grow">
-                            <h3 className="font-heading text-2xl text-gray-900 font-bold mb-3 leading-tight">
-                                Investissons dans la force des femmes rurales
-                            </h3>
-                            <p className="text-gray-500 mb-6 font-body text-sm flex-grow">
-                                Du champ au marché agroécologique : autonomisation économique et sociale.
-                            </p>
-
-                            <div className="bg-light rounded-lg p-4 mb-6">
-                                <div className="flex items-end gap-2 mb-1">
-                                    <span className="font-heading text-2xl font-bold text-primary">100 558 €</span>
-                                    <span className="text-xs text-gray-400 font-bold uppercase mb-1.5">Objectif</span>
-                                </div>
-                                <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-                                    <div className="bg-accent h-2 rounded-full" style={{ width: '15%' }}></div>
-                                </div>
-                                <p className="text-xs text-gray-500 font-body">
-                                    Pour sortir <strong>2 100 femmes et jeunes</strong> de la précarité.
-                                </p>
-                            </div>
-
-                            <a href="#contact" className="w-full py-4 text-center border-2 border-primary text-primary font-heading font-bold uppercase text-sm tracking-wider rounded hover:bg-primary hover:text-white transition-colors">
-                                Découvrir et contribuer
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Initiative II */}
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
-                        <div className="h-48 bg-primary/10 relative overflow-hidden">
-                            {/* Placeholder for Image */}
-                            <div className="absolute inset-0 flex items-center justify-center text-primary/20">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={0.5} stroke="currentColor" className="w-24 h-24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                                </svg>
-                            </div>
-                            <div className="absolute top-4 left-4 bg-accent text-primary text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">
-                                Initiative II
-                            </div>
-                        </div>
-                        <div className="p-8 flex flex-col flex-grow">
-                            <h3 className="font-heading text-2xl text-gray-900 font-bold mb-3 leading-tight">
-                                Urgence Nord Togo
-                            </h3>
-                            <p className="text-gray-500 mb-6 font-body text-sm flex-grow">
-                                Soutien aux populations affectées par les changements climatiques et les conflits dans la première zone d’accueil.
-                            </p>
-
-                            <div className="bg-light rounded-lg p-4 mb-6">
-                                <div className="flex items-end gap-2 mb-1">
-                                    <span className="font-heading text-2xl font-bold text-primary">1 690 540 €</span>
-                                    <span className="text-xs text-gray-400 font-bold uppercase mb-1.5">Objectif</span>
-                                </div>
-                                <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-                                    <div className="bg-accent h-2 rounded-full" style={{ width: '5%' }}></div>
-                                </div>
-                                <p className="text-xs text-gray-500 font-body">
-                                    Pour soutenir <strong>6 250 déplacés et hôtes</strong> en difficulté.
-                                </p>
-                            </div>
-
-                            <a href="#contact" className="w-full py-4 text-center border-2 border-primary text-primary font-heading font-bold uppercase text-sm tracking-wider rounded hover:bg-primary hover:text-white transition-colors">
-                                Découvrir et contribuer
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Donation Details Block */}
-                <div className="mt-16 bg-secondary text-white rounded-xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div id="donations" className="mb-20 bg-secondary text-white rounded-xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
 
                     <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start justify-between">
@@ -134,8 +52,89 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="mt-6 text-xs text-gray-400 italic bg-black/20 p-3 rounded">
-                                <span className="text-accent font-bold">*</span> Veuillez SVP indiquer votre nom et quelle initiative vous soutenez en libellé du virement.
+                                <span className="text-accent font-bold">*</span> Veillez SVP, indiquer votre nom et quelle initiative vous soutenez
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Initiatives Grid */}
+                <div className="grid md:grid-cols-2 gap-8 mb-16">
+                    {/* Initiative I */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
+                        <div className="h-64 bg-primary/10 relative overflow-hidden group">
+                            <img
+                                src="/images/Initiative1.webp"
+                                alt="Femmes rurales du Togo"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-4 left-4 bg-accent text-primary text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">
+                                Initiative I
+                            </div>
+                        </div>
+                        <div className="p-8 flex flex-col flex-grow">
+                            <h3 className="font-heading text-2xl text-gray-900 font-bold mb-3 leading-tight">
+                                Investissons dans la force des femmes rurales du champ au marché agroécologiques
+                            </h3>
+                            <p className="text-gray-500 mb-6 font-body text-sm flex-grow">
+                                Nous souhaitons récolter 100 558 € pour sortir 2100 femmes et jeunes de la précarité.
+                            </p>
+
+                            <div className="bg-light rounded-lg p-4 mb-6">
+                                <div className="flex items-end gap-2 mb-1">
+                                    <span className="font-heading text-2xl font-bold text-primary">100 558 €</span>
+                                    <span className="text-xs text-gray-400 font-bold uppercase mb-1.5">Objectif</span>
+                                </div>
+                                <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                                    <div className="bg-accent h-2 rounded-full" style={{ width: '15%' }}></div>
+                                </div>
+                                <p className="text-xs text-gray-500 font-body">
+                                    Pour sortir <strong>2 100 femmes et jeunes</strong> de la précarité.
+                                </p>
+                            </div>
+
+                            <Link to="/projets/initiative-1" className="w-full py-4 text-center border-2 border-primary text-primary font-heading font-bold uppercase text-sm tracking-wider rounded hover:bg-primary hover:text-white transition-colors">
+                                Découvrir et contribuer
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Initiative II */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300">
+                        <div className="h-64 bg-primary/10 relative overflow-hidden group">
+                            <img
+                                src="/images/Initiative2.webp"
+                                alt="Soutien populations Nord Togo"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute top-4 left-4 bg-accent text-primary text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">
+                                Initiative II
+                            </div>
+                        </div>
+                        <div className="p-8 flex flex-col flex-grow">
+                            <h3 className="font-heading text-2xl text-gray-900 font-bold mb-3 leading-tight">
+                                Soutien aux populations affectées par les changements climatiques et les conflits au Nord Togo
+                            </h3>
+                            <p className="text-gray-500 mb-6 font-body text-sm flex-grow">
+                                Nous souhaitons récolter 1 690 540€ pour soutenir 6 250 déplacés et hôtes affectés par le climat et les conflits.
+                            </p>
+
+                            <div className="bg-light rounded-lg p-4 mb-6">
+                                <div className="flex items-end gap-2 mb-1">
+                                    <span className="font-heading text-2xl font-bold text-primary">1 690 540 €</span>
+                                    <span className="text-xs text-gray-400 font-bold uppercase mb-1.5">Objectif</span>
+                                </div>
+                                <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                                    <div className="bg-accent h-2 rounded-full" style={{ width: '5%' }}></div>
+                                </div>
+                                <p className="text-xs text-gray-500 font-body">
+                                    Pour soutenir <strong>6 250 déplacés et hôtes</strong>.
+                                </p>
+                            </div>
+
+                            <Link to="/projets/initiative-2" className="w-full py-4 text-center border-2 border-primary text-primary font-heading font-bold uppercase text-sm tracking-wider rounded hover:bg-primary hover:text-white transition-colors">
+                                Découvrir et contribuer
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -146,3 +145,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

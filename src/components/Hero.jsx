@@ -2,61 +2,54 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center min-h-[85vh] bg-white overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-20">
-      {/* Background Decorative Elements (Optional - keep clean for now as per image) */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gray-50 rounded-bl-full -z-0 opacity-50"></div>
-      <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-gray-50 rounded-tr-full -z-0 opacity-50"></div>
+    <section className="relative min-h-screen flex items-end overflow-hidden bg-[#01391C]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/hero.jpg"
+          alt="Agricultural landscape"
+          className="w-full h-full object-cover opacity-55"
+        />
+        {/* Dark overlay stronger at bottom-left where text lives */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#01391C]/90 via-[#01391C]/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#01391C]/80 via-transparent to-transparent"></div>
+      </div>
 
-      <div className="relative z-10 container mx-auto px-6 max-w-5xl text-center">
+      {/* Content — Bottom-Left */}
+      <div className="relative z-10 w-full px-[5%] lg:px-[8%] pb-20 pt-32">
+        {/* Elegant subtitle above headline */}
+        <p className="font-body text-white/50 text-[9px] md:text-[10px] uppercase mb-5 border-l-2 border-[#5DA603] pl-4">
+          Groupe chrétien de Recherche · Action pour la Promotion Humaine
+        </p>
 
-        {/* Main Headline */}
-        <h1 className="font-body text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-primary max-w-4xl mx-auto">
-          Votre partenaire <span className="font-playfair italic font-normal text-primary/80 text-4xl md:text-5xl lg:text-6xl">en</span> <br className="hidden md:block" />
-          produits <span className="font-playfair italic font-normal text-primary/80 text-4xl md:text-5xl lg:text-6xl">agricoles</span> et <span className="font-playfair italic font-normal text-primary/80 text-4xl md:text-5xl lg:text-6xl">artisanaux</span>
+        {/* Headline */}
+        <h1 className="font-heading font-extrabold text-[28px] sm:text-[36px] md:text-[46px] lg:text-[52px] text-white leading-[1.05] mb-6 uppercase max-w-[900px]">
+          VOTRE PARTENAIRE D'EXCELLENCE EN PRODUITS AGRICOLES ET ARTISANAUX.
         </h1>
 
-        {/* Subtitle */}
-        <p className="font-body text-base md:text-lg text-secondary/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-          <strong>GRAPHE TOGO</strong> (Groupe chrétien de Recherche - Action pour la Promotion Humaine) vous accompagne dans la production, la commercialisation et la promotion de l'agroécologie. <br />
-          Votre source de produits alimentaires de qualité, durables et respectueux de l'environnement.
+        <p className="font-body text-white/80 text-xs md:text-sm lg:text-base mb-12 max-w-[700px] leading-relaxed">
+          Nous accompagnons les producteurs locaux dans la création de produits de haute qualité,
+          alliant technologies innovantes et résilience climatique. Bienvenue chez GRAPHE TOGO.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start gap-4">
           <a
             href="#about"
-            className="w-full sm:w-auto px-8 py-3 bg-transparent border border-gray-300 text-primary font-heading font-bold uppercase tracking-wider text-sm hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 rounded"
+            className="px-8 py-5 bg-[#5DA603] text-black font-heading font-bold uppercase tracking-widest text-base hover:bg-white transition-all duration-300 rounded-[2px]"
           >
-            Qui sommes-nous ?
+            DÉCOUVRIR NOTRE IMPACT
           </a>
           <a
-            href="#contact" // or a products link if available
-            className="w-full sm:w-auto px-8 py-3 bg-primary text-white font-heading font-bold uppercase tracking-wider text-sm hover:bg-primary/80 transition-all duration-300 rounded shadow-md flex items-center gap-2 justify-center"
+            href="/galerie"
+            className="px-8 py-5 bg-transparent border-2 border-white/60 text-white font-heading font-bold uppercase tracking-widest text-base hover:border-white hover:bg-white/10 transition-all duration-300 rounded-[2px] flex items-center gap-3 group"
           >
-            Nos Produits <span className="text-lg">→</span>
+            VOIR LA GALERIE
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-5 h-5 group-hover:translate-x-1 transition-transform">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m13.5 4.5 7.5 7.5-7.5 7.5M3 12h18" />
+            </svg>
           </a>
         </div>
-
-        {/* Stats/Footer of Hero */}
-        <div className="mt-16 pt-8 border-t border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div>
-            <p className="text-4xl font-bold text-primary font-heading">1996</p>
-            <p className="text-sm text-gray-400 uppercase tracking-widest mt-1">Fondation</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold text-primary font-heading">100%</p>
-            <p className="text-sm text-gray-400 uppercase tracking-widest mt-1">Réussite</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold text-primary font-heading">Agro</p>
-            <p className="text-sm text-gray-400 uppercase tracking-widest mt-1">Écologie</p>
-          </div>
-          <div>
-            <p className="text-4xl font-bold text-primary font-heading">Kara</p>
-            <p className="text-sm text-gray-400 uppercase tracking-widest mt-1">Campus</p>
-          </div>
-        </div>
-
       </div>
     </section>
   );

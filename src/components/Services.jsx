@@ -24,7 +24,7 @@ const Services = () => {
                         className="group relative p-8 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                     >
                         {/* Icon */}
-                        <div className="w-16 h-16 mb-6 text-primary bg-green-50 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <div className="w-16 h-16 mb-6 text-primary bg-primary/5 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                             {service.icon}
                         </div>
 
@@ -40,7 +40,7 @@ const Services = () => {
                         </p>
 
                         {/* Link */}
-                        <Link to={`/services/${service.slug}`} className="inline-flex items-center text-sm font-bold text-primary hover:text-green-900 transition-colors duration-300">
+                        <Link to={`/services/${service.slug}`} className="inline-flex items-center text-sm font-bold text-primary hover:text-primary/80 transition-colors duration-300">
                             En savoir plus
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />

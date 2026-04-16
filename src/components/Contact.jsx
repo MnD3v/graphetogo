@@ -139,7 +139,7 @@ const Contact = () => {
                                 ></textarea>
                             </div>
 
-                            <button type="submit" className="px-8 py-4 bg-primary text-white font-heading font-bold uppercase tracking-widest hover:bg-green-900 transition-all duration-300 rounded-lg shadow-lg">
+                            <button type="submit" className="px-8 py-4 bg-primary text-white font-heading font-bold uppercase tracking-widest hover:bg-primary/90 transition-all duration-300 rounded-lg shadow-lg">
                                 Envoyer le message
                             </button>
                         </form>
