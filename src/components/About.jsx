@@ -1,32 +1,56 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
+    const fadeIn = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: "easeOut" }
+        }
+    };
+
+    const imageFade = {
+        hidden: { opacity: 0, scale: 0.95 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 1, ease: "easeOut" }
+        }
+    };
+
     return (
         <section id="about" className="bg-white py-20 px-4 md:px-8">
             <div className="mx-auto max-w-[1300px] relative overflow-hidden rounded-[40px] bg-[#01391C] flex flex-col lg:flex-row min-h-[600px] shadow-2xl">
 
                 {/* Left Content Area */}
-                <div className="flex-1 p-10 md:p-16 lg:p-20 flex flex-col justify-center relative z-10">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="flex-1 p-10 md:p-16 lg:p-20 flex flex-col justify-center relative z-10"
+                >
                     {/* Subtitle Pill */}
-                    <div className="inline-block w-fit mb-8">
+                    <motion.div variants={fadeIn} className="inline-block w-fit mb-8">
                         <span className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-full text-white/90 text-sm font-medium border border-white/20">
                             Propulser le succès local
                         </span>
-                    </div>
+                    </motion.div>
 
                     {/* Main Heading */}
-                    <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-[1.1] mb-8 max-w-[600px]">
+                    <motion.h2 variants={fadeIn} className="font-heading text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-[1.1] mb-8 max-w-[600px]">
                         Bâtir un avenir plus durable avec l'agroécologie
-                    </h2>
+                    </motion.h2>
 
                     {/* Description text */}
-                    <p className="font-body text-white/70 text-lg leading-relaxed mb-12 max-w-[550px]">
+                    <motion.p variants={fadeIn} className="font-body text-white/70 text-lg leading-relaxed mb-12 max-w-[550px]">
                         Nous nous engageons aux côtés des communautés rurales pour cultiver des solutions innovantes,
                         renforcer l'autonomie technique et construire une résilience durable face aux défis de demain.
-                    </p>
+                    </motion.p>
 
                     {/* Buttons */}
-                    <div className="flex flex-wrap gap-4">
+                    <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
                         <a
                             href="#contact"
                             className="px-8 py-4 bg-white text-[#01391C] font-bold rounded-full hover:bg-gray-100 transition-all duration-300"
@@ -39,19 +63,29 @@ const About = () => {
                         >
                             En savoir plus
                         </a>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
                 {/* Right Image Area */}
-                <div className="lg:w-[45%] relative min-h-[400px] lg:min-h-full">
-                    <img
+                <div className="lg:w-[45%] relative min-h-[400px] lg:min-h-full overflow-hidden">
+                    <motion.img
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={imageFade}
                         src="/images/about.jpg"
                         alt="Impact Agriculture"
                         className="absolute inset-0 w-full h-full object-cover"
                     />
 
                     {/* Floating Stats Card Overlay */}
-                    <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[20%] z-20 hidden lg:block">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                        className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[20%] z-20 hidden lg:block"
+                    >
                         <div className="bg-white p-8 rounded-[25px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border border-gray-100 min-w-[300px]">
                             <div className="flex justify-between items-center mb-6">
                                 <span className="text-gray-400 text-sm font-medium">Bilan 2024</span>
@@ -75,7 +109,7 @@ const About = () => {
                                 Progrès communautaire durable
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

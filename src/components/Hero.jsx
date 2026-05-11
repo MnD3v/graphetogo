@@ -1,6 +1,27 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden bg-[#01391C]">
       {/* Background Image */}
@@ -16,24 +37,41 @@ const Hero = () => {
       </div>
 
       {/* Content — Bottom-Left */}
-      <div className="relative z-10 w-full px-[5%] lg:px-[8%] pb-20 pt-32">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 w-full px-[5%] lg:px-[8%] pb-20 pt-32"
+      >
         {/* Elegant subtitle above headline */}
-        <p className="font-body text-white/50 text-[9px] md:text-[10px] uppercase mb-5 border-l-2 border-[#5DA603] pl-4">
+        <motion.p
+          variants={itemVariants}
+          className="font-body text-white/50 text-[9px] md:text-[10px] uppercase mb-5 border-l-2 border-[#5DA603] pl-4"
+        >
           Groupe chrétien de Recherche · Action pour la Promotion Humaine
-        </p>
+        </motion.p>
 
         {/* Headline */}
-        <h1 className="font-heading font-extrabold text-[28px] sm:text-[36px] md:text-[46px] lg:text-[52px] text-white leading-[1.05] mb-6 uppercase max-w-[900px]">
+        <motion.h1
+          variants={itemVariants}
+          className="font-heading font-extrabold text-[28px] sm:text-[36px] md:text-[46px] lg:text-[52px] text-white leading-[1.05] mb-6 uppercase max-w-[900px]"
+        >
           VOTRE PARTENAIRE D'EXCELLENCE EN PRODUITS AGRICOLES ET ARTISANAUX.
-        </h1>
+        </motion.h1>
 
-        <p className="font-body text-white/80 text-xs md:text-sm lg:text-base mb-12 max-w-[700px] leading-relaxed">
+        <motion.p
+          variants={itemVariants}
+          className="font-body text-white/80 text-xs md:text-sm lg:text-base mb-12 max-w-[700px] leading-relaxed"
+        >
           Nous accompagnons les producteurs locaux dans la création de produits de haute qualité,
           alliant technologies innovantes et résilience climatique. Bienvenue chez GRAPHE TOGO.
-        </p>
+        </motion.p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-start gap-4">
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col sm:flex-row items-start gap-4"
+        >
           <a
             href="#about"
             className="px-8 py-5 bg-[#5DA603] text-black font-heading font-bold uppercase tracking-widest text-base hover:bg-white transition-all duration-300 rounded-[2px]"
@@ -49,8 +87,8 @@ const Hero = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="m13.5 4.5 7.5 7.5-7.5 7.5M3 12h18" />
             </svg>
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
